@@ -11,16 +11,16 @@ namespace Halloween
         //These are properties, they describe the object
         public string Costume { get; set; }
         public Bag Bag { get; set; }
-        public string Name { get; set; }
+        public Person Person { get; set; }
 
         /// <summary>
         /// This is the constructor, it is used when calling the New TrickOrTreater() method
         /// </summary>
         /// <param name="Costume">Costume they are wearing</param>
-        public TrickOrTreater(string name, string costume)
+        public TrickOrTreater(Person person, string costume)
         {
             //set the name of the object to the name parameter
-            this.Name = name;
+            this.Person = person;
             //set the costume of the object to the costume parameter
             this.Costume = costume;
             //initialize (make a new object) the bag.

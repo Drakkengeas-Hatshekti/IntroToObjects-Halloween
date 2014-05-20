@@ -27,7 +27,7 @@ namespace Halloween
 
         public void AddCandy(string candyName)
         {
-            Candies.Add(new Candy(candyName));
+            this.Candies.Add(new Candy(candyName));
         }
 
         /// <summary>
@@ -37,6 +37,11 @@ namespace Halloween
         public int CandyCount()
         {
             return this.Candies.Count();
+        }
+
+        public int NumberOfCandyVarieties()
+        {
+            return this.Candies.Select(x => x.Name).Distinct().Count();
         }
     }
 }
